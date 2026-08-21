@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<title>Orbit Coder</title>
+
+<style>
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    background: #020508;
+    color: #e7ffff;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+}
+
+/* CYBER GRID BACKGROUND */
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            rgba(0,255,247,.025) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(255,0,220,.025) 1px,
+            transparent 1px
+        );
+
+    background-size: 32px 32px;
+
+    pointer-events: none;
+    z-index: 0;
+}
+
+
+/* TOP HEADER */
+
+.top {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+    right: 0;
+
+    height: 38px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 15px;
+
+    background: rgba(2,5,8,.97);
+
+    border-bottom: 1px solid rgba(255,0,220,.35);
+
+    color: #00fff7;
+
+    font-family: monospace;
+    font-size: 9px;
+
+    letter-spacing: 2px;
+
+    z-index: 20;
+
+    box-shadow:
+        0 0 15px rgba(255,0,220,.08);
+}
+
+
+/* ONLINE STATUS */
+
+.status {
+    color: #00ff88;
+
+    text-shadow:
+        0 0 8px #00ff88;
+}
+
+
+/* CHATBASE AREA */
+
+.chatbase-container {
+
+    position: fixed;
+
+    top: 38px;
+    bottom: 0;
+
+    left: 0;
+    right: 0;
+
+    padding: 6px;
+
+    z-index: 5;
+
+}
+
+
+/* CYBERPUNK BORDER */
+
+.chatbase-container::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 3px;
+
+    pointer-events: none;
+
+    border: 1px solid rgba(255,0,220,.25);
+
+    box-shadow:
+        inset 0 0 20px rgba(255,0,220,.04),
+        0 0 20px rgba(0,255,247,.04);
+
+    z-index: 10;
+
+}
+
+
+/* CHATBASE IFRAME */
+
+.chatbase-container iframe {
+
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    border: 1px solid #ff35df;
+
+    background: #020508;
+
+    border-radius: 3px;
+
+    box-shadow:
+        0 0 12px rgba(255,53,223,.18),
+        inset 0 0 20px rgba(0,255,247,.03);
+
+}
+
+
+/* PINK GLOW */
+
+.chatbase-container iframe:hover {
+
+    border-color: #ff65ed;
+
+    box-shadow:
+        0 0 18px rgba(255,53,223,.25);
+
+}
+
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+    .top {
+
+        height: 34px;
+
+        padding: 0 10px;
+
+        font-size: 8px;
+
+        letter-spacing: 1.5px;
+
+    }
+
+    .chatbase-container {
+
+        top: 34px;
+
+        padding: 4px;
+
+    }
+
+    .chatbase-container iframe {
+
+        border-color: #ff35df;
+
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+
+<!-- ORBIT CODER HEADER -->
+
+<div class="top">
+
+    <span>ORBIT // CODER</span>
+
+    <span class="status">● ONLINE</span>
+
+</div>
+
+
+<!-- CHATBASE AI -->
+
+<div class="chatbase-container">
+
+    <iframe
+        src="https://www.chatbase.co/chatbot-iframe/plek50Yf0lSWkRT7rA1lG"
+        width="100%"
+        height="100%"
+        frameborder="0"
+        allow="microphone">
+    </iframe>
+
+</div>
+
+
+</body>
+</html>
